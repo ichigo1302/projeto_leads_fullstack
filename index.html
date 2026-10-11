@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101827">
+
+  <title>Cadastro de Leads</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <main class="container">
+    <section class="card">
+
+      <div class="brand">
+        <div class="brand-icon" aria-hidden="true">✦</div>
+      </div>
+
+      <h1>Vamos conversar?</h1>
+
+      <p class="subtitle">
+        Preencha seus dados e nossa equipe entrará
+        em contato com você.
+      </p>
+
+      <form id="leadForm">
+
+        <div class="field">
+          <label for="nome">Nome completo</label>
+
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            placeholder="Como podemos te chamar?"
+            autocomplete="name"
+            minlength="2"
+            maxlength="120"
+            required
+          >
+        </div>
+
+        <div class="field">
+          <label>Telefone</label>
+
+          <div class="phone-fields">
+
+            <input
+              type="tel"
+              id="ddd"
+              name="ddd"
+              placeholder="DDD"
+              aria-label="DDD"
+              inputmode="numeric"
+              autocomplete="tel-area-code"
+              maxlength="2"
+              pattern="[0-9]{2}"
+              required
+            >
+
+            <input
+              type="tel"
+              id="telefone"
+              name="telefone"
+              placeholder="99999-9999"
+              aria-label="Número do telefone"
+              inputmode="numeric"
+              autocomplete="tel-national"
+              maxlength="10"
+              required
+            >
+
+          </div>
+        </div>
+
+        <button type="submit" id="submitButton">
+          Quero receber contato →
+        </button>
+
+        <div
+          id="message"
+          class="message"
+          role="status"
+          aria-live="polite"
+        ></div>
+
+      </form>
+
+      <p class="privacy">
+        <span aria-hidden="true">✓</span>
+        Seus dados serão tratados com segurança.
+      </p>
+
+    </section>
+  </main>
+</body>
+</html>
